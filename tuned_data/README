@@ -1,0 +1,40 @@
+Some data cannot be easily obtained in an automated way.  Those
+sources are placed in this directory and may not be straightforward
+to fully replicate.
+
+US Census filters
+-----------------
+
+Data was obtained from the US Census Bureau, starting at:
+
+    https://factfinder.census.gov/faces/tableservices/
+
+This site requires selection and navigation of table features
+within a web browser, and does not provide a RESTful interface in
+any obvious way.
+
+The row index in the main data file here is "5-Digit ZIP code
+Tabulation Area" (ZCTA) which is not identical with zip code.  It
+uses the same 5 digits, but the boundaries are only approximately
+the same.  Information about ZCTAs can be found at: 
+
+    https://www.census.gov/geo/maps-data/data/cbf/cbf_zcta.html
+
+In general, even though some home address zip codes will not fall
+within the ZCTA named the same, they will be adjacent, and most
+likely demographically similar.  The file `DEC_10_DP_DPDP1.zip` is
+not retained in this repository, but consists of the following 4
+files that are contained herein:
+
+    DEC_10_DP_DPDP1.txt:
+        methodological notes on field meanings
+    DEC_10_DP_DPDP1_metadata.csv:
+        a detailed description of fields in archive
+    DEC_10_DP_DPDP1_with_ann.csv:
+        the main data file
+    aff_download_readme_ann.txt:
+        a description of the archive and these files
+
+The plugin `datasets/load_housholds.py` imports the raw data
+file from the US census, but discards a large number of the columns
+within the full downloaded source. 
