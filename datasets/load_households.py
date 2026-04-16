@@ -80,7 +80,7 @@ def _run(use_cached=True):
     print("Generating demographic features from US Census data...")
 
     df = pd.read_csv(
-        "%s/../tuned_data/DEC_10_DP_DPDP1_with_ann.csv" % dir,
+        "%s/../tuned_data/ACS_2020_2024_DP_DPDP1_with_ann.csv" % dir,
         header=None,
         skiprows=2,
         names=list(key),

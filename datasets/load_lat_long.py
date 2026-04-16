@@ -1,8 +1,12 @@
 import zipfile
-from os.path import dirname
+from os.path import dirname, abspath
 import pandas as pd
 
-from ..util import download
+# Add the project root to the path so we can import util
+import sys
+sys.path.insert(0, abspath(dirname(__file__) + "/.."))
+
+from util import download
 
 
 def _run(use_cached=True):

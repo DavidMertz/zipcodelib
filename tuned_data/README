@@ -31,6 +31,7 @@ files that are contained herein:
     ACS_2020_2024_DP_DPDP1_metadata.csv:
         a detailed description of fields in archive
     ACS_2020_2024_DP_DPDP1_with_ann.csv:
+        the main data file
     aff_download_readme_ann.txt:
         a description of the archive and these files
 
