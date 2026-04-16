@@ -9,8 +9,8 @@ def _run(use_cached=True):
 
     Based on IRS data.
 
-    Note: As of 2019-01, year 2015 is the most recent data
-    that is formatted correcly. 2016 exists, but has errors.
+    Note: As of 2026-04-16, year 2015 is the most recent data
+    that is formatted correcly. Some years exist, but have errors.
     Later years have not yet been published.
     """
     url = "https://www.irs.gov/pub/irs-soi/15zpallnoagi.csv"
