@@ -9,11 +9,11 @@ def _run(use_cached=True):
 
     Based on IRS data.
 
-    Note: As of 2026-04-16, year 2015 is the most recent data
-    that is formatted correcly. Some years exist, but have errors.
-    Later years have not yet been published.
+    Note: As of 2026-04-16, year 2022 is the most recent data that is formatted
+    correcly. Some years exist, but have errors. Years later than 2022 have not 
+    yet been published.
     """
-    url = "https://www.irs.gov/pub/irs-soi/15zpallnoagi.csv"
+    url = "https://www.irs.gov/pub/irs-soi/22zpallnoagi.csv"
 
     # No progress bar; content-length misreported in HTTP header
     fname = download(url, use_cached=use_cached, progress=False)
