@@ -67,7 +67,7 @@ key = {
 }
 
 
-def _run(use_cached=True):
+def _run(use_cached=True):  
     """Plugin to generate numerous demographic features
 
     Based on US Census Bureau data.
@@ -75,12 +75,15 @@ def _run(use_cached=True):
     This is a "static loader" in that it utilizes a data source that was
     somewhat manually downloaded to the project directories
     """
+    _ = use_cached
     start = time()
     dir = dirname(__file__)
     print("Generating demographic features from US Census data...")
 
+    # TODO: Locate correct source for more recent data than 2010
+    data_fname = "%s/../tuned_data/DEC_10_DP_DPDP1_with_ann.csv" % dir
     df = pd.read_csv(
-        "%s/../tuned_data/ACS_2020_2024_DP_DPDP1_with_ann.csv" % dir,
+        data_fname,
         header=None,
         skiprows=2,
         names=list(key),
