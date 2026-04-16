@@ -1,7 +1,7 @@
 # Usage
 
 `zipcodelib` present a simple API.  Plugins that obtain and process data from
-various source that live in the `datasets/` subdirectory.  The `README.md` 
+various sources that live in the `datasets/` subdirectory.  The `README.md` 
 file inside that directory describes the structure of a plugin, and the 
 existing examples should provide good templates to write additional ones.
 

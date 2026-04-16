@@ -22,8 +22,8 @@ the same.  Information about ZCTAs can be found at:
 
 In general, even though some home address zip codes will not fall
 within the ZCTA named the same, they will be adjacent, and most
-likely demographically similar.  The file `ACS_2020_2024_DP_DPDP1.zip` is
-not retained in this repository, but consists of the following 4
+likely demographically similar.  The file `ACS_2020_2024_DP_DPDP1.zip`
+is not retained in this repository, but consists of the following 4
 files that are contained herein:
 
     ACS_2020_2024_DP_DPDP1.txt:
