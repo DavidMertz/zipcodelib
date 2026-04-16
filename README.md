@@ -43,4 +43,7 @@ print(lookup(zips))
 
 ## Data Sources
 
-This library uses US Census Bureau data for demographic features (ACS 2020-2024 5-year estimates) and geographic coordinates (Gazetteer data from 2024). These datasets are not included in this repository but must be manually downloaded to the `tuned_data` directory.
+This library uses US Census Bureau data for demographic features (data from
+2010 until a newer source is located) and geographic coordinates (Gazetteer
+data from 2025). These datasets are not included in this repository but must be
+manually downloaded to the `tuned_data` directory.
