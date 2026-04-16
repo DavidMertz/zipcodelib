@@ -1,9 +1,9 @@
 # Usage
 
 `zipcodelib` present a simple API.  Plugins that obtain and process data from
-various source live in the `datasets/` subdirectory.  The `README.md` file
-inside that directory describes the structure of a plugin, and the existing
-examples should provide good templates to write additional ones.
+various sources that live in the `datasets/` subdirectory.  The `README.md` 
+file inside that directory describes the structure of a plugin, and the 
+existing examples should provide good templates to write additional ones.
 
 Using the library consists simply of (optionally) refreshing the available
 data, then using the `lookup()` function to generate additional features
@@ -31,7 +31,7 @@ datasets.load_all()
 # Example of results.  Any sequence of zipcodes is fine.  In
 # most cases these will be a column from a Pandas DataFrame
 # that contains zip codes for each customer order
-zips = ['04930', '91024', '04930', '80303', '11436', '11213']
+zips = ['04101', '04930', '91024', '01376', '80303', '11436', '11213']
 
 # The return value is a DataFrame with various columns (or a
 # Series if only a single string is passed in).  Users can
@@ -40,3 +40,7 @@ zips = ['04930', '91024', '04930', '80303', '11436', '11213']
 from zipcodelib import lookup
 print(lookup(zips))
 ```
+
+## Data Sources
+
+This library uses US Census Bureau data for demographic features (ACS 2020-2024 5-year estimates) and geographic coordinates (Gazetteer data from 2024). These datasets are not included in this repository but must be manually downloaded to the `tuned_data` directory.

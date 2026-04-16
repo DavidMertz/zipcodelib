@@ -11,8 +11,8 @@ def _run(use_cached=True):
     Based on US Census Bureau data
     """
     domain = "http://www2.census.gov/"
-    path = "geo/docs/maps-data/data/gazetteer/2018_Gazetteer/"
-    zipfname = "2018_Gaz_zcta_national.zip"
+    path = "geo/docs/maps-data/data/gazetteer/2025_Gazetteer/"
+    zipfname = "2025_Gaz_zcta_national.zip"
     url = domain + path + zipfname
     dir = dirname(__file__)
 
@@ -20,8 +20,8 @@ def _run(use_cached=True):
     zipfile.ZipFile(fname).extractall(path="%s/../cache" % dir)
     datafile = fname.replace(".zip", ".txt")
 
-    df = pd.read_csv(datafile, dtype={"GEOID": str}, sep="\t")
-    df.set_index("GEOID", inplace=True)
+    df = pd.read_csv(datafile, dtype={"GEOID": str}, sep="|")
+    df = df.set_index("GEOID")
     df.index.name = "ZIPCODE"
     df.columns = [col.strip() for col in df.columns]
     df = df[["INTPTLAT", "INTPTLONG", "ALAND_SQMI"]]
