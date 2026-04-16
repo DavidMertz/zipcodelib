@@ -31,7 +31,7 @@ datasets.load_all()
 # Example of results.  Any sequence of zipcodes is fine.  In
 # most cases these will be a column from a Pandas DataFrame
 # that contains zip codes for each customer order
-zips = ['04930', '91024', '04930', '80303', '11436', '11213']
+zips = ['04101', '04930', '91024', '01376', '80303', '11436', '11213']
 
 # The return value is a DataFrame with various columns (or a
 # Series if only a single string is passed in).  Users can
